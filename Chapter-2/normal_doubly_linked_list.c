@@ -19,7 +19,7 @@ struct Node* deleteAfterNodeX(struct Node* start, struct Node* NodeX);
 struct Node* deleteBeforeNodeX(struct Node* start, struct Node* NodeX);
 void displayLinkedList(struct Node* start);
 
-// Testing
+// Menu Driver Code
 int main() {
     struct Node* start = NULL, *newNode, *NodeX;
     int data, element, choice;
