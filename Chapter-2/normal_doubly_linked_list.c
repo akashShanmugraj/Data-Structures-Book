@@ -25,7 +25,7 @@ int main() {
     int data, element, choice;
 
     do {
-        printf("\nLinked List Menu\n");
+        printf("\nDoubly Linked List Menu\n");
         printf("1. Add a node at beginning\n");
         printf("2. Add a node at end\n");
         printf("3. Delete the beginning node\n");
