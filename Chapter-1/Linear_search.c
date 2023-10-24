@@ -35,4 +35,6 @@ int main()
     {
         printf("The element search was not found");
     }
+    free(arr);
+    return 0;
 }
