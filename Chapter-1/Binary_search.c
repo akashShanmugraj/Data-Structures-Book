@@ -40,5 +40,7 @@ int main()
     scanf("%d",&value);
     int result =  binary(arr,0 ,n-1,value);
     printf("the position: %d",result);
+    free(arr);
+    return 0;
     
 }
