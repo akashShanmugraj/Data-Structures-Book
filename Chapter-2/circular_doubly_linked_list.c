@@ -354,15 +354,15 @@ void displayLinkedList(struct Node* start) {
     printf("Start -> ");
     // Single node
     if (current->next == start) {
-        printf("(%d) %d (%d) -> Start\n", current->prev, current->value, current->next);
+        printf("%d -> Start\n", current->value);
         return;
     }
     // Multiple nodes
     else {
-        printf("(%d) %d (%d) -> ", current->prev, current->value, current->next);
+        printf("%d -> ", current->value);
         current = current->next;
         while (current != start) {
-            printf("(%d) %d (%d) -> ", current->prev, current->value, current->next);
+            printf("%d -> ", current->value);
             current = current->next;
         }
         printf("Start\n");
