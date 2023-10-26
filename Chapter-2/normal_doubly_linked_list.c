@@ -255,13 +255,13 @@ struct Node *insertAfterNodeX(struct Node *start, struct Node *NodeX, int data)
         }
         current = current->next;
     }
-    // If NodeX not found in linked list
+    // If Node X not found in linked list
     if (!found)
     {
         printf("Node not found!\n");
         return start;
     }
-    // If NodeX points to end node
+    // If Node X points to end node
     if (current->next == NULL)
     {
         start = insertAtEnd(start, data);
@@ -292,13 +292,13 @@ struct Node *insertBeforeNodeX(struct Node *start, struct Node *NodeX, int data)
         }
         current = current->next;
     }
-    // If NodeX is not found in linked list
+    // If Node X is not found in linked list
     if (!found)
     {
         printf("Node not found!\n");
         return start;
     }
-    // If NodeX points to starting node
+    // If Node X points to starting node
     if (current->prev == NULL)
     {
         start = insertAtBeginning(start, data);
@@ -335,7 +335,7 @@ struct Node *deleteAfterNodeX(struct Node *start, struct Node *NodeX)
         printf("Node not found or no node to delete!\n");
         return start;
     }
-    // If NodeX points to last before node
+    // If Node X points to last before node
     if (current->next->next == NULL)
     {
         start = deleteAtEnd(start);
