@@ -5,11 +5,11 @@ int binarySearch(int *, int, int, int);
 
 int main()
 {
-    int n, value, *arr, result;
+    int n, value, *arr, result, i;
     printf("Enter number of array elements: ");
     scanf("%d", &n);
     arr = (int *)malloc(sizeof(int) * n); // Allocating n integers
-    for (int i = 0; i < n; i++)
+    for (i = 0; i < n; i++)
     {
         printf("Enter elements %d: ", i);
         scanf("%d", &arr[i]);
