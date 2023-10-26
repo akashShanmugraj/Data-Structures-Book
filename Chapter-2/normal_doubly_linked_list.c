@@ -241,7 +241,7 @@ struct Node *searchNode(struct Node *start, int element)
 }
 
 // Insertion, Deletion after or before Node X
-// Insert after Node X
+// Insert node after Node X
 struct Node *insertAfterNodeX(struct Node *start, struct Node *NodeX, int data)
 {
     struct Node *current = start, *newNode, *temp;
@@ -278,7 +278,7 @@ struct Node *insertAfterNodeX(struct Node *start, struct Node *NodeX, int data)
     return start;
 }
 
-// Insert before Node X
+// Insert node before Node X
 struct Node *insertBeforeNodeX(struct Node *start, struct Node *NodeX, int data)
 {
     struct Node *current = start, *newNode, *temp;
@@ -315,7 +315,7 @@ struct Node *insertBeforeNodeX(struct Node *start, struct Node *NodeX, int data)
     return start;
 }
 
-// Delete after Node X
+// Delete node after Node X
 struct Node *deleteAfterNodeX(struct Node *start, struct Node *NodeX)
 {
     struct Node *current = start, *temp;
@@ -350,7 +350,7 @@ struct Node *deleteAfterNodeX(struct Node *start, struct Node *NodeX)
     return start;
 }
 
-// Delete before Node X
+// Delete node before Node X
 struct Node *deleteBeforeNodeX(struct Node *start, struct Node *NodeX)
 {
     struct Node *current = start, *temp;
