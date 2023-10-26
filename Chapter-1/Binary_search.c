@@ -5,31 +5,32 @@ int binarySearch(int *, int, int, int);
 
 int main()
 {
-    int n, value;
+    int n, value, *arr, result;
     printf("Enter number of array elements: ");
     scanf("%d", &n);
-    int *arr = (int *)malloc(sizeof(int) * n); // Allocating n integers
+    arr = (int *)malloc(sizeof(int) * n); // Allocating n integers
     for (int i = 0; i < n; i++)
     {
-        printf("Enter elements %d ", i);
+        printf("Enter elements %d: ", i);
         scanf("%d", &arr[i]);
     }
     printf("Enter search value: ");
     scanf("%d", &value);
-    int result = binarySearch(arr, 0, n - 1, value);
+    result = binarySearch(arr, 0, n - 1, value);
     printf("The position: %d", result);
-    free(arr);
+    free(arr); // Deallocate memory
     return 0;
 }
 
 int binarySearch(int *arr, int low, int high, int value)
 {
+    int mid;
     if (low > high)
     {
         printf("Element not found\n");
         return -1;
     }
-    int mid = (low + high) / 2;
+    mid = (low + high) / 2;
     if (arr[mid] == value) // Target found at mid
     {
         printf("Element found in the array\n");
