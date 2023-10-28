@@ -41,7 +41,6 @@ void addNode(int *arr, int length, int value)
 
 void deleteNode(int *arr, int length, int value)
 {
-    // Find the node with the specified value
     for (int i = 0; i < length; i++)
     {
         if (arr[i] == value)
