@@ -7,7 +7,7 @@ struct node
     struct node *left, *right;
 };
 
-struct node* insertNode(struct node *root, struct node *newNode)
+struct node *insertNode(struct node *root, struct node *newNode)
 {
     if (root == NULL)
         return newNode;
@@ -35,14 +35,14 @@ void displayTree(struct node *root)
     displayTree(root->right);
 }
 
-struct node* findMinNode(struct node* node)
+struct node *findMinNode(struct node *node)
 {
     while (node->left != NULL)
         node = node->left;
     return node;
 }
 
-struct node* deleteNode(struct node* root, int key)
+struct node *deleteNode(struct node *root, int key)
 {
     if (root == NULL)
         return root;
@@ -55,18 +55,18 @@ struct node* deleteNode(struct node* root, int key)
     {
         if (root->left == NULL)
         {
-            struct node* temp = root->right;
+            struct node *temp = root->right;
             free(root);
             return temp;
         }
         else if (root->right == NULL)
         {
-            struct node* temp = root->left;
+            struct node *temp = root->left;
             free(root);
             return temp;
         }
 
-        struct node* temp = findMinNode(root->right);
+        struct node *temp = findMinNode(root->right);
         root->data = temp->data;
         root->right = deleteNode(root->right, temp->data);
     }
@@ -75,7 +75,7 @@ struct node* deleteNode(struct node* root, int key)
 
 int main()
 {
-    struct node* root = NULL;
+    struct node *root = NULL;
     root = insertNode(root, getNode(50));
     insertNode(root, getNode(30));
     insertNode(root, getNode(20));
